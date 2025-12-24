@@ -1,0 +1,31 @@
+<div class="stadium-bg p-4 text-center">
+  <div class="row text-danger fw-bold mb-1">
+    <div class="col-4">OVERS</div>
+    <div class="col-4">BALLS LEFT</div>
+    <div class="col-4">WICKETS</div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-4"><input type="number" [(ngModel)]="overs" class="form-control rounded-pill fw-bold text-center text-warning" readonly></div>
+    <div class="col-4"><input type="number" [(ngModel)]="ballsLeft" class="form-control rounded-pill fw-bold text-center text-warning" readonly></div>
+    <div class="col-4"><input type="number" [(ngModel)]="wickets" class="form-control rounded-pill fw-bold text-center text-warning" readonly></div>
+  </div>
+
+  <h3 class="text-danger fw-bold my-4">START IINNINGS</h3>
+
+  <div class="row text-danger fw-bold mb-1">
+    <div class="col-4">SET TARGET</div>
+    <div class="col-4">NEED</div>
+    <div class="col-4">CURRENT RUN</div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-4"><input type="number" [(ngModel)]="target" (ngModelChange)="onTargetChange()" class="form-control rounded-pill fw-bold text-center text-warning"></div>
+    <div class="col-4"><input type="number" [(ngModel)]="need" class="form-control rounded-pill fw-bold text-center text-warning" readonly></div>
+    <div class="col-4"><input type="number" [(ngModel)]="currentRun" class="form-control rounded-pill fw-bold text-center text-warning" readonly></div>
+  </div>
+
+  <div class="row g-3 px-5">
+    <div class="col-4" *ngFor="let r of [0, 1, 2, 3, 4, 6]">
+      <button class="btn btn-primary w-100 fw-bold fs-4" (click)="processRun(r)">{{r}}-RUN</button>
+    </div>
+  </div>
+</div>

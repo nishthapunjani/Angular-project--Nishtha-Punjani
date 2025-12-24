@@ -1,0 +1,33 @@
+.stadium-bg {
+  /* This is the high-quality stadium background */
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=2000') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+/* Glass effect for the input fields */
+input.form-control {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid white;
+  color: #ff8c00 !important; /* Bright orange/yellow text */
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h3, .row div {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Makes text readable over the image */
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: #2563eb;
+}
